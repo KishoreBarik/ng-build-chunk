@@ -12,10 +12,13 @@ The actual code base generated build contains rxjs chunk size exceeding 900KB.
 
 This repo contains very minimal code from the actual code base, still issue can be reproduced. This repo produces rxjs chunk around 221KB.
 
+![image](https://raw.githubusercontent.com/KishoreBarik/ng-build-chunk/master/screenshots/pre-comment.png)
 
 But, if we comment the line no 10 in *app.routes.module.ts*  
 `{ path: "initiate", loadChildren: "./modules/initiate-task/initiate-task.module#InitiateTaskModule" },` 
 the rxjs size reduces to around 30 odd KB. However there is one more chunk of js from webpack gets added sized around 180KB
+
+![image](https://raw.githubusercontent.com/KishoreBarik/ng-build-chunk/master/screenshots/post-comment.png)
 
 
 # Build command
