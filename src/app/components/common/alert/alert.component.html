@@ -1,0 +1,12 @@
+<div *ngIf="message?.type === 'success'" id="toast-container" class="toast-top-center" aria-live="polite" role="alert">
+    <div class="toast toast-success" style="">
+        <div class="toast-title"></div>
+        <div class="toast-message">{{message.text}}</div>
+    </div>
+</div>
+<div *ngIf="message?.type === 'error'" id="toast-container" class="toast-top-center" aria-live="polite" role="alert">
+    <div class="toast toast-error" style="">
+        <div class="toast-title"></div>
+        <div class="toast-message">{{message.text}}</div>
+    </div>
+</div>

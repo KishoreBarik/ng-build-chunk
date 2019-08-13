@@ -1,8 +1,27 @@
 {
   "extends": "../tsconfig.json",
   "compilerOptions": {
-    "outDir": "../out-tsc/app",
-    "types": []
+      "declaration": false,
+      "emitDecoratorMetadata": true,
+      "experimentalDecorators": true,
+      "lib": ["es6", "dom"],
+      "mapRoot": "./",
+      "module": "es6",
+      "moduleResolution": "node",
+      "outDir": "../dist/out-tsc",
+      "sourceMap": true,
+      "allowSyntheticDefaultImports": true,
+      "target": "es5",
+      "typeRoots": [
+          "../node_modules/@types"
+      ],
+      "downlevelIteration": true,
+      "baseUrl": "./",
+      "paths": {
+          "moment": [
+              "../node_modules/moment/min/moment.min.js"
+          ]
+      }
   },
   "exclude": [
     "test.ts",
